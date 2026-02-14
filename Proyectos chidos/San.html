@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta 14 de Febrero 💌</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Georgia;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  overflow:hidden;
+}
+
+.carta{
+  background:#ffffffee;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 0 30px rgba(0,0,0,0.2);
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+h2{
+  color:#c2185b;
+}
+
+p{
+  color:#6a0572;
+  font-size:18px;
+}
+
+.botones{
+  margin-top:25px;
+}
+
+button{
+  padding:12px 22px;
+  font-size:16px;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  margin:0 10px;
+}
+
+#si{
+  background:#ff4d6d;
+  color:white;
+}
+
+#no{
+  background:#6a0572;
+  color:white;
+  position:absolute;
+  z-index:999; /* Siempre encima */
+}
+</style>
+</head>
+<body>
+
+<div class="carta">
+
+  <h2>Para ti 💖</h2>
+  <p>Este 14 de febrero quería preguntarte algo...</p>
+  <p><b>¿Te gustaría ser mi San Valentín? 💘</b></p>
+
+
+    <button id="si">Sí 💕</button>
+    <button id="no">No 😢</button>
+</div>
+
+<script>
+const siBtn = document.getElementById("si");
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", function(){
+  noBtn.style.top = Math.random()*200 + "px";
+  noBtn.style.left = Math.random()*200 + "px";
+});
+
+siBtn.addEventListener("click", () => {
+  alert("Sabía que dirías que sí 😍💘 Feliz 14 de febrero");
+});
+
+// Movimiento libre por TODA la pantalla
+noBtn.addEventListener("mouseover", () => {
+  const maxX = window.innerWidth - noBtn.offsetWidth;
+  const maxY = window.innerHeight - noBtn.offsetHeight;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+});
+</script>
+</body>
+</html>
